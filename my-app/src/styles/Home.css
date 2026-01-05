@@ -1,0 +1,216 @@
+/* ====== RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+/* ====== ROOT ====== */
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    135deg,
+    #f5f7ff 0%,
+    #f0e8ff 40%,
+    #fdeff6 100%
+  );
+}
+
+/* ====== MAIN LAYOUT ====== */
+.home-main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  padding: 48px 80px;
+  gap: 60px;
+}
+
+/* ====== LEFT PREVIEW (Cards area) ====== */
+.results-preview {
+  display: grid;
+  grid-template-columns: repeat(2, 260px);
+  grid-auto-rows: minmax(140px, auto);
+  gap: 24px;
+  align-content: center;
+  background-image: url('../images/bgImage.png');
+}
+
+/* Example card styling (you can reuse later) */
+.preview-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.preview-card h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* ====== RIGHT CONTENT ====== */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ====== HEADER ====== */
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-placeholder {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6a00ff, #9b5cff);
+}
+
+.logo-text h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+}
+
+.logo-text p {
+  font-size: 13px;
+  color: #6b6b6b;
+}
+
+.lang-selector {
+  border: 1px solid #d7c9ff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #4a2ca6;
+}
+
+/* ====== MAIN HEADING ====== */
+.main-content h2 {
+  font-size: 32px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 32px;
+}
+
+.main-content h2 span {
+  color: #5a00d4;
+}
+
+/* ====== FORM ====== */
+.scan-form {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* URL Input */
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #ddd;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #fff;
+  width: 320px;
+}
+
+.globe-icon {
+  font-size: 16px;
+}
+
+.input-wrapper input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Dropdown */
+.scan-form select {
+  height: 46px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid #5a00d4;
+  font-size: 14px;
+  background: #fff;
+  color: #5a00d4;
+  cursor: pointer;
+}
+
+/* Button */
+.scan-form button {
+  height: 46px;
+  padding: 0 26px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #5a00d4, #7b3cff);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.scan-form button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(90, 0, 212, 0.25);
+}
+
+/* ====== FOOTER ====== */
+.home-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 40px;
+  font-size: 13px;
+  color: #444;
+}
+
+.home-footer span {
+  cursor: pointer;
+}
+
+.home-footer .copyright {
+  margin-left: auto;
+  color: #777;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 1100px) {
+  .home-main {
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
+
+  .results-preview {
+    justify-content: center;
+  }
+
+  .scan-form {
+    flex-wrap: wrap;
+  }
+
+  .input-wrapper {
+    width: 100%;
+  }
+}
